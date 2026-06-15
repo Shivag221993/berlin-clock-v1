@@ -1,0 +1,23 @@
+.berlin-clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a202c;
+  padding: 24px;
+  border-radius: 12px;
+  width: 360px;
+  margin: 0 auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif;
+}
+
+.berlin-clock-title {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.berlin-clock-digital {
+  color: #a0aec0;
+  margin-top: 16px;
+  font-size: 1.2rem;
+  font-family: monospace;
+}
