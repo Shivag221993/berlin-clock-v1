@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useCurrentTime } from "./useCurrentTime";
 import { useTimeParser } from "./useTimeParser";
+import { useBerlinClockLogic } from "./useBerlinClockLogic";
 
 export const useBerlinClock = () => {
   const [isCustomMode, setIsCustomMode] = useState(false);
@@ -13,6 +14,7 @@ export const useBerlinClock = () => {
     currentTime,
     activeCustomString,
   );
+  const clockStates = useBerlinClockLogic(hours, minutes, seconds);
 
   const pad = (num: number) => String(num).padStart(2, "0");
   const digitalDisplay = isCustomMode
@@ -25,5 +27,6 @@ export const useBerlinClock = () => {
     customTime,
     setIsCustomMode,
     setCustomTime,
+    ...clockStates,
   };
 };
