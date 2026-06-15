@@ -11,6 +11,7 @@ export function BerlinClock() {
     fiveHoursRow,
     oneHourRow,
     fiveMinutesRow,
+    oneMinuteRow,
   } = useBerlinClock();
 
   return (
@@ -24,6 +25,8 @@ export function BerlinClock() {
       <ClockRow rowState={oneHourRow} activeColorClass="lamp-red" rowId="1h" />
 
       <MinutesFiveRow rowState={fiveMinutesRow} />
+
+      <ClockRow rowState={oneMinuteRow} activeColorClass="lamp-yellow" rowId="1m" />
 
       <div className="berlin-clock-digital">{digitalTime}</div>
     </div>
